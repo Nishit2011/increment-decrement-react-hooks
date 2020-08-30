@@ -5,12 +5,12 @@ export default function App() {
   const [val, setVal] = React.useState(0);
 
   const handleIncrement = () => {
-    setVal((val) => val + 1);
+    setVal((preVState) => preVState + 1);
   };
 
   const handleDecrement = () => {
     if (val <= 0) return false;
-    setVal((val) => val - 1);
+    setVal((preVState) => preVState - 1);
   };
   return (
     <div className="App">
